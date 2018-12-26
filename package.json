@@ -1,0 +1,24 @@
+{
+  "name": "typescript-series",
+  "version": "1.0.0",
+  "description": "an example series to get started with TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Atyantik/typescript-series.git"
+  },
+  "keywords": [
+    "typescript",
+    "react",
+    "webpack"
+  ],
+  "author": "Tirth Bodawala",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Atyantik/typescript-series/issues"
+  },
+  "homepage": "https://github.com/Atyantik/typescript-series#readme"
+}
