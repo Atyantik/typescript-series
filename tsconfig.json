@@ -1,0 +1,9 @@
+{
+	"compilerOptions": {
+		"noEmitOnError": true,
+		"outDir": "build"
+	},
+	"include": [
+		"src/**/*"
+	]
+}
