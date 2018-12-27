@@ -4,7 +4,9 @@
   "description": "an example series to get started with TypeScript",
   "main": "index.js",
   "scripts": {
-    "start": "tsc && node build/index.js",
+    "start": "tsc && concurrently -n \"TypeScript,Nodemon\" \"npm run ts-watch\" \"npm run server-watch\"",
+    "ts-watch": "tsc -w",
+    "server-watch": "nodemon --watch build/server.js build/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,6 +25,12 @@
   },
   "homepage": "https://github.com/Atyantik/typescript-series#readme",
   "dependencies": {
+    "concurrently": "^4.1.0",
+    "express": "^4.16.4",
+    "nodemon": "^1.18.9",
     "typescript": "^3.2.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.16.0"
   }
 }
