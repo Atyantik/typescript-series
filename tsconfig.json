@@ -2,7 +2,9 @@
 	"compilerOptions": {
 		"noEmitOnError": true,
 		"target": "es5",
-		"outDir": "build"
+    "module": "esnext",
+		"lib": ["DOM", "ESNext", "DOM.Iterable", "ScriptHost", "es2015.promise"],
+		"outDir": "dist"
 	},
 	"include": [
 		"src/**/*"

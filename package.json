@@ -4,9 +4,9 @@
   "description": "an example series to get started with TypeScript",
   "main": "index.js",
   "scripts": {
-    "start": "tsc && concurrently -n \"TypeScript,Nodemon\" \"npm run ts-watch\" \"npm run server-watch\"",
-    "ts-watch": "tsc -w",
-    "server-watch": "nodemon --watch build/server.js build/server.js",
+    "start": "webpack --colors && concurrently -r -n \"Webpack,Nodemon\" \"npm run webpack-watch\" \"npm run server-watch\"",
+    "webpack-watch": "webpack --watch --colors",
+    "server-watch": "nodemon --watch dist/server.js dist/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -28,9 +28,13 @@
     "concurrently": "^4.1.0",
     "express": "^4.16.4",
     "nodemon": "^1.18.9",
-    "typescript": "^3.2.2"
+    "ts-loader": "^5.3.2",
+    "typescript": "^3.2.2",
+    "webpack": "^4.28.3",
+    "webpack-dev-server": "^3.1.14"
   },
   "devDependencies": {
-    "@types/express": "^4.16.0"
+    "@types/express": "^4.16.0",
+    "webpack-cli": "^3.1.2"
   }
 }
